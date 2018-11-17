@@ -2930,12 +2930,15 @@ class WP_Query {
 			 */
 			$split_the_query = apply_filters( 'split_the_query', $split_the_query, $this );
 
+			echo " split_the_query ";
+			echo $split_the_query;
+
 			if ( $split_the_query ) {
 				// First get the IDs and then fill in the objects
 
 				$this->request = "SELECT $found_rows $distinct {$wpdb->posts}.ID FROM {$wpdb->posts} $join WHERE 1=1 $where $groupby $orderby $limits";
 
-                echo $this->request;
+
 
 				/**
 				 * Filters the Post IDs SQL request before sending.
