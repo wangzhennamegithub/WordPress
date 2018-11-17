@@ -2851,7 +2851,7 @@ class WP_Query {
 
 		$this->request = $old_request = "SELECT $found_rows $distinct $fields FROM {$wpdb->posts} $join WHERE 1=1 $where $groupby $orderby $limits";
 
-
+        echo $this->request;
 
 
 		if ( ! $q['suppress_filters'] ) {
@@ -2937,7 +2937,7 @@ class WP_Query {
 
 				$this->request = "SELECT $found_rows $distinct {$wpdb->posts}.ID FROM {$wpdb->posts} $join WHERE 1=1 $where $groupby $orderby $limits";
 
-
+                echo $this->request;
 
 				/**
 				 * Filters the Post IDs SQL request before sending.
