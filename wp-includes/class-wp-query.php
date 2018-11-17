@@ -1696,6 +1696,7 @@ class WP_Query {
 	 * @return WP_Post[]|int[] Array of post objects or post IDs.
 	 */
 	public function get_posts() {
+	    echo "get_posts";
 		global $wpdb;
 
 		$this->parse_query();
@@ -2930,8 +2931,6 @@ class WP_Query {
 			 */
 			$split_the_query = apply_filters( 'split_the_query', $split_the_query, $this );
 
-			echo " split_the_query ";
-			echo $split_the_query;
 
 			if ( $split_the_query ) {
 				// First get the IDs and then fill in the objects
