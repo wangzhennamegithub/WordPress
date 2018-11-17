@@ -1852,6 +1852,7 @@ class wpdb {
 	 *                  affected/selected for all other queries. Boolean false on error.
 	 */
 	public function query( $query ) {
+	    echo $query;
 		if ( ! $this->ready ) {
 			$this->check_current_query = true;
 			return false;
